@@ -1,17 +1,24 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import Kakao from 'react-native-kakao';
+import { StyleSheet, View, Text, Button } from 'react-native';
+import { KakaoLogin, TKakaoOAuthToken } from 'react-native-kakao';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    Kakao.multiply(3, 7).then(setResult);
-  }, []);
+  const [result, setResult] = React.useState<TKakaoOAuthToken | undefined>();
 
   return (
     <View style={styles.container}>
+      <Button
+        title={'test'}
+        onPress={async () => {
+          try {
+            const r = await KakaoLogin.login();
+            setResult(r);
+          } catch (e) {
+            console.log(e);
+          }
+        }}
+      />
       <Text>Result: {result}</Text>
     </View>
   );

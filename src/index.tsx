@@ -1,9 +1,8 @@
-import { NativeModules } from 'react-native';
+import RNKakaoLogin, { TRNKakaoLogin } from './KakaoLogin';
+export { TKakaoOAuthToken, TRNKakaoLogin } from './KakaoLogin';
 
-type KakaoType = {
-  multiply(a: number, b: number): Promise<number>;
+export const KakaoLogin = RNKakaoLogin as TRNKakaoLogin;
+
+export default {
+  KakaoLogin,
 };
-
-const { Kakao } = NativeModules;
-
-export default Kakao as KakaoType;
