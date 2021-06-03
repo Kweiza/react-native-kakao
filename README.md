@@ -5,7 +5,7 @@ KakaoSDK for react native
 ## Installation
 
 ```sh
-npm install react-native-kakao
+yarn add react-native-kakao
 ```
 
 ## Configuration
