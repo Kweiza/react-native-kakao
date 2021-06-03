@@ -1,83 +1,35 @@
 import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-import { StyleSheet, View, Button } from 'react-native';
-import { KakaoLogin } from 'react-native-kakao';
+import SelectScreen from './SelectScreen';
+import LoginScreen from './LoginScreen';
+
+export type AppStackParamList = {
+  SelectScreen: {};
+  LoginScreen: {};
+};
+export interface TAppStackProps {}
+const AppStack = createStackNavigator<AppStackParamList>();
+const AppStackScreen = (_props: TAppStackProps) => (
+  <AppStack.Navigator>
+    <AppStack.Screen
+      name={'SelectScreen'}
+      component={SelectScreen}
+      options={{ headerTitle: 'Examples' }}
+    />
+    <AppStack.Screen
+      name={'LoginScreen'}
+      component={LoginScreen}
+      options={{ headerTitle: 'Login' }}
+    />
+  </AppStack.Navigator>
+);
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Button
-        title={'login'}
-        onPress={async () => {
-          try {
-            const r = await KakaoLogin.login();
-            console.log(r);
-          } catch (e) {
-            console.log(e);
-          }
-        }}
-      />
-
-      <Button
-        title={'logout'}
-        onPress={async () => {
-          try {
-            const r = await KakaoLogin.logout();
-            console.log(r);
-          } catch (e) {
-            console.log(e);
-          }
-        }}
-      />
-
-      <Button
-        title={'unlink'}
-        onPress={async () => {
-          try {
-            const r = await KakaoLogin.unlink();
-            console.log(r);
-          } catch (e) {
-            console.log(e);
-          }
-        }}
-      />
-
-      <Button
-        title={'accessToken'}
-        onPress={async () => {
-          try {
-            const r = await KakaoLogin.accessTokenInfo();
-            console.log(r);
-          } catch (e) {
-            console.log(e);
-          }
-        }}
-      />
-
-      <Button
-        title={'me'}
-        onPress={async () => {
-          try {
-            const r = await KakaoLogin.me();
-            console.log(r);
-          } catch (e) {
-            console.log(e);
-          }
-        }}
-      />
-    </View>
+    <NavigationContainer>
+      <AppStackScreen />
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
-  },
-});
