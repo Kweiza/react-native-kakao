@@ -98,7 +98,7 @@ class RNKakaoLogin: RNKakao {
         }
     }
     
-    @objc(getAccessToken:rejecter:)
+    @objc(accessTokenInfo:rejecter:)
     func accessTokenInfo(_ resolve: @escaping RCTPromiseResolveBlock,
                         rejecter reject: @escaping RCTPromiseRejectBlock) -> Void {
         DispatchQueue.main.async {
@@ -108,7 +108,7 @@ class RNKakaoLogin: RNKakao {
                 }
                 else {
                     resolve([
-                        "appId": accessTokenInfo.appId,
+                        "appId": accessTokenInfo?.appId,
                         "id": accessTokenInfo?.id,
                         "expiresIn": accessTokenInfo?.expiresIn,
                     ])
@@ -117,7 +117,7 @@ class RNKakaoLogin: RNKakao {
         }
     }
     
-    @objc(getProfile:rejecter:)
+    @objc(me:rejecter:)
     func me(_ resolve: @escaping RCTPromiseResolveBlock,
                     rejecter reject: @escaping RCTPromiseRejectBlock) -> Void {
         DispatchQueue.main.async {
@@ -127,53 +127,53 @@ class RNKakaoLogin: RNKakao {
                 }
                 else {
                     resolve([
-                        "id": user.id,
+                        "id": user?.id as Any,
                         "properties": [
-                            "nickname": user.properties?.nickname,
-                            "profile_image": user.properties?.profile_image,
-                            "thumbnail_image": user.properties?.thumbnail_image,
+                            "nickname": user?.properties?["nickname"] as Any,
+                            "profile_image": user?.properties?["profile_image"] as Any,
+                            "thumbnail_image": user?.properties?["thumbnail_image"] as Any,
                         ],
                         "kakaoAccount": [
-                            "profileNeedsAgreement": user.kakaoAccount?.profileNeedsAgreement,
-                            "profileNicknameNeedsAgreement": user.kakaoAccount?.profileNicknameNeedsAgreement,
-                            "profileImageNeedsAgreement": user.kakaoAccount?.profileImageNeedsAgreement,
+                            "profileNeedsAgreement": user?.kakaoAccount?.profileNeedsAgreement as Any,
+                            "profileNicknameNeedsAgreement": user?.kakaoAccount?.profileNicknameNeedsAgreement as Any,
+                            "profileImageNeedsAgreement": user?.kakaoAccount?.profileImageNeedsAgreement as Any,
                             "profile": [
-                                "nickname": user.kakaoAccount?.profile?.nickname,
-                                "profileImageUrl": user.kakaoAccount?.profile?.profileImageUrl,
-                                "thumbnailImageUrl": user.kakaoAccount?.profile?.thumbnailImageUrl,
-                                "isDefaultImage": user.kakaoAccount?.profile?.isDefaultImage,
+                                "nickname": user?.kakaoAccount?.profile?.nickname as Any,
+                                "profileImageUrl": user?.kakaoAccount?.profile?.profileImageUrl as Any,
+                                "thumbnailImageUrl": user?.kakaoAccount?.profile?.thumbnailImageUrl as Any,
+                                "isDefaultImage": user?.kakaoAccount?.profile?.isDefaultImage as Any
                             ],
-                            "emailNeedsAgreement": user.kakaoAccount?.emailNeedsAgreement,
-                            "isEmailValid": user.kakaoAccount?.isEmailValid,
-                            "isEmailVerified": user.kakaoAccount?.isEmailVerified,
-                            "email": user.kakaoAccount?.email,
-                            "ageRangeNeedsAgreement": user.kakaoAccount?.ageRangeNeedsAgreement,
-                            "ageRange": user.kakaoAccount?.ageRange,
-                            "birthyearNeedsAgreement": user.kakaoAccount?.birthyearNeedsAgreement,
-                            "birthyear": user.kakaoAccount?.birthyear,
-                            "birthdayNeedsAgreement": user.kakaoAccount?.birthdayNeedsAgreement,
-                            "birthday": user.kakaoAccount?.birthday,
-                            "birthdayType": user.kakaoAccount?.birthdayType,
-                            "genderNeedsAgreement": userkakaoAccount?.genderNeedsAgreement,
-                            "gender": user.kakaoAccount?.gender,
-                            "phoneNumberNeedsAgreement": user.kakaoAccount?.phoneNumberNeedsAgreement,
-                            "phoneNumber": user.kakaoAccount?.phoneNumber,
-                            "ciNeedsAgreement": user.kakaoAccount?.ciNeedsAgreement,
-                            "ci": user.kakaoAccount?.ci,
-                            "ciAuthenticatedAt": user.kakaoAccount?.ciAuthenticatedAt,
-                            "legalNameNeedsAgreement": user.kakaoAccount?.legalNameNeedsAgreement,
-                            "legalName": user.kakaoAccount?.legalName,
-                            "legalBirthDateNeedsAgreement": user.kakaoAccount?.legalBirthDateNeedsAgreement,
-                            "legalBirthDate": user.kakaoAccount?.legalBirthDate,
-                            "legalGenderNeedsAgreement": userkakaoAccount?.legalGenderNeedsAgreement,
-                            "legalGender": user.kakaoAccount?.legalGender,
-                            "isKoreanNeedsAgreement": user.kakaoAccount?.isKoreanNeedsAgreement,
-                            "isKorean": user.kakaoAccount?.isKorean,
+                            "emailNeedsAgreement": user?.kakaoAccount?.emailNeedsAgreement as Any,
+                            "isEmailValid": user?.kakaoAccount?.isEmailValid as Any,
+                            "isEmailVerified": user?.kakaoAccount?.isEmailVerified as Any,
+                            "email": user?.kakaoAccount?.email as Any,
+                            "ageRangeNeedsAgreement": user?.kakaoAccount?.ageRangeNeedsAgreement as Any,
+                            "ageRange": user?.kakaoAccount?.ageRange as Any,
+                            "birthyearNeedsAgreement": user?.kakaoAccount?.birthyearNeedsAgreement as Any,
+                            "birthyear": user?.kakaoAccount?.birthyear as Any,
+                            "birthdayNeedsAgreement": user?.kakaoAccount?.birthdayNeedsAgreement as Any,
+                            "birthday": user?.kakaoAccount?.birthday as Any,
+                            "birthdayType": user?.kakaoAccount?.birthdayType as Any,
+                            "genderNeedsAgreement": user?.kakaoAccount?.genderNeedsAgreement as Any,
+                            "gender": user?.kakaoAccount?.gender as Any,
+                            "phoneNumberNeedsAgreement": user?.kakaoAccount?.phoneNumberNeedsAgreement as Any,
+                            "phoneNumber": user?.kakaoAccount?.phoneNumber as Any,
+                            "ciNeedsAgreement": user?.kakaoAccount?.ciNeedsAgreement as Any,
+                            "ci": user?.kakaoAccount?.ci as Any,
+                            "ciAuthenticatedAt": user?.kakaoAccount?.ciAuthenticatedAt as Any,
+                            "legalNameNeedsAgreement": user?.kakaoAccount?.legalNameNeedsAgreement as Any,
+                            "legalName": user?.kakaoAccount?.legalName as Any,
+                            "legalBirthDateNeedsAgreement": user?.kakaoAccount?.legalBirthDateNeedsAgreement as Any,
+                            "legalBirthDate": user?.kakaoAccount?.legalBirthDate as Any,
+                            "legalGenderNeedsAgreement": user?.kakaoAccount?.legalGenderNeedsAgreement as Any,
+                            "legalGender": user?.kakaoAccount?.legalGender as Any,
+                            "isKoreanNeedsAgreement": user?.kakaoAccount?.isKoreanNeedsAgreement as Any,
+                            "isKorean": user?.kakaoAccount?.isKorean as Any,
                         ],
-                        "groupUserToken": user.groupUserToken,
-                        "connectedAt": user.connectedAt,
-                        "synchedAt": user.synchedAt,
-                        "hasSignedUp": user.hasSignedUp,
+                        "groupUserToken": user?.groupUserToken as Any,
+                        "connectedAt": user?.connectedAt as Any,
+                        "synchedAt": user?.synchedAt as Any,
+                        "hasSignedUp": user?.hasSignedUp as Any,
                     ])
                 }
             }

@@ -1,25 +1,70 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text, Button } from 'react-native';
-import { KakaoLogin, TKakaoOAuthToken } from 'react-native-kakao';
+import { StyleSheet, View, Button } from 'react-native';
+import { KakaoLogin } from 'react-native-kakao';
 
 export default function App() {
-  const [result, setResult] = React.useState<TKakaoOAuthToken | undefined>();
-
   return (
     <View style={styles.container}>
       <Button
-        title={'test'}
+        title={'login'}
         onPress={async () => {
           try {
             const r = await KakaoLogin.login();
-            setResult(r);
+            console.log(r);
           } catch (e) {
             console.log(e);
           }
         }}
       />
-      <Text>Result: {result}</Text>
+
+      <Button
+        title={'logout'}
+        onPress={async () => {
+          try {
+            const r = await KakaoLogin.logout();
+            console.log(r);
+          } catch (e) {
+            console.log(e);
+          }
+        }}
+      />
+
+      <Button
+        title={'unlink'}
+        onPress={async () => {
+          try {
+            const r = await KakaoLogin.unlink();
+            console.log(r);
+          } catch (e) {
+            console.log(e);
+          }
+        }}
+      />
+
+      <Button
+        title={'accessToken'}
+        onPress={async () => {
+          try {
+            const r = await KakaoLogin.accessTokenInfo();
+            console.log(r);
+          } catch (e) {
+            console.log(e);
+          }
+        }}
+      />
+
+      <Button
+        title={'me'}
+        onPress={async () => {
+          try {
+            const r = await KakaoLogin.me();
+            console.log(r);
+          } catch (e) {
+            console.log(e);
+          }
+        }}
+      />
     </View>
   );
 }

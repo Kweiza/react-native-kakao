@@ -92,7 +92,7 @@ export type TRNKakaoLogin = {
   login(): Promise<TKakaoOAuthToken>;
   logout(): Promise<void>;
   unlink(): Promise<void>;
-  accessToken(): Promise<TKakaoAccessTokenInfo>;
+  accessTokenInfo(): Promise<TKakaoAccessTokenInfo>;
   me(): Promise<void>;
 };
 
