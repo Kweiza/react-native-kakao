@@ -7,6 +7,42 @@ export default function LoginScreen() {
   return (
     <View style={styles.container}>
       <Button
+        title={'isKakaoTalkLoginAvailable'}
+        onPress={async () => {
+          try {
+            const r = await KakaoLogin.isKakaoTalkLoginAvailable();
+            console.log(r);
+          } catch (e) {
+            console.log(e);
+          }
+        }}
+      />
+
+      <Button
+        title={'loginWithKakaoTalk'}
+        onPress={async () => {
+          try {
+            const r = await KakaoLogin.loginWithKakaoTalk();
+            console.log(r);
+          } catch (e) {
+            console.log(e);
+          }
+        }}
+      />
+
+      <Button
+        title={'loginWithKakaoAccount'}
+        onPress={async () => {
+          try {
+            const r = await KakaoLogin.loginWithKakaoAccount();
+            console.log(r);
+          } catch (e) {
+            console.log(e);
+          }
+        }}
+      />
+
+      <Button
         title={'login'}
         onPress={async () => {
           try {

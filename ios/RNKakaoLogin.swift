@@ -30,6 +30,56 @@ class RNKakaoLogin: RNKakao {
         return AuthController.handleOpenUrl(url: url)
     }
     
+    @objc(isKakaoTalkLoginAvailable:rejecter:)
+    func isKakaoTalkLoginAvailable(_ resolve: @escaping RCTPromiseResolveBlock,
+                                   rejecter reject: @escaping RCTPromiseRejectBlock) -> Void {
+        DispatchQueue.main.async {
+            resolve(UserApi.isKakaoTalkLoginAvailable());
+        }
+    }
+    
+    @objc(loginWithKakaoTalk:rejecter:)
+    func loginWithKakaoTalk(_ resolve: @escaping RCTPromiseResolveBlock,
+                                   rejecter reject: @escaping RCTPromiseRejectBlock) -> Void {
+        DispatchQueue.main.async {
+            UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
+                if let error = error {
+                    reject("RNKakaoLogin loginWithKakaoTalk", error.localizedDescription, nil)
+                }
+                else {
+                    resolve([
+                        "accessToken": oauthToken?.accessToken ?? "",
+                        "expiredAt": oauthToken!.expiredAt,
+                        "refreshToken": oauthToken?.refreshToken ?? "",
+                        "refreshTokenExpiredAt": oauthToken!.refreshTokenExpiredAt,
+                        "scopes": oauthToken?.scopes ?? "",
+                    ])
+                }
+            }
+        }
+    }
+    
+    @objc(loginWithKakaoAccount:rejecter:)
+    func loginWithKakaoAccount(_ resolve: @escaping RCTPromiseResolveBlock,
+                                   rejecter reject: @escaping RCTPromiseRejectBlock) -> Void {
+        DispatchQueue.main.async {
+            UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+                if let error = error {
+                    reject("RNKakaoLogin loginWithKakaoAccount", error.localizedDescription, nil)
+                }
+                else {
+                    resolve([
+                        "accessToken": oauthToken?.accessToken ?? "",
+                        "refreshToken": oauthToken?.refreshToken ?? "",
+                        "accessTokenExpiresAt": oauthToken!.expiredAt,
+                        "refreshTokenExpiresAt": oauthToken!.refreshTokenExpiredAt,
+                        "scopes": oauthToken?.scopes ?? "",
+                    ]);
+                }
+            }
+        }
+    }
+    
     @objc(login:rejecter:)
     func login(_ resolve: @escaping RCTPromiseResolveBlock,
                rejecter reject: @escaping RCTPromiseRejectBlock) -> Void {

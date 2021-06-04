@@ -89,6 +89,9 @@ export type TKakaoUser = {
 };
 
 export type TRNKakaoLogin = {
+  isKakaoTalkLoginAvailable(): Promise<boolean>;
+  loginWithKakaoTalk(): Promise<TKakaoOAuthToken>;
+  loginWithKakaoAccount(): Promise<TKakaoOAuthToken>;
   login(): Promise<TKakaoOAuthToken>;
   logout(): Promise<void>;
   unlink(): Promise<void>;
