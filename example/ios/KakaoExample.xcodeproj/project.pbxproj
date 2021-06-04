@@ -17,6 +17,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* KakaoExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* KakaoExampleTests.m */; };
 		4C39C56BAD484C67AA576FFA /* libPods-KakaoExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA3E69C5B9553B26FBA2DF04 /* libPods-KakaoExample.a */; };
 		4DC5421D26656C7000839CCC /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC5421C26656C7000839CCC /* Bridge.swift */; };
+		4DC54236266AAEA800839CCC /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 008F07F21AC5B25A0029DE68 /* main.jsbundle */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -318,6 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DC54236266AAEA800839CCC /* main.jsbundle in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
@@ -536,7 +538,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.reactnativekakao;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.reactnativekakaosdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KakaoExample.app/KakaoExample";
 			};
@@ -556,7 +558,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.reactnativekakao;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.reactnativekakaosdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KakaoExample.app/KakaoExample";
 			};
@@ -578,7 +580,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.reactnativekakao;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.reactnativekakaosdk;
 				PRODUCT_NAME = KakaoExample;
 				SWIFT_OBJC_BRIDGING_HEADER = "KakaoExample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -602,7 +604,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.reactnativekakao;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.reactnativekakaosdk;
 				PRODUCT_NAME = KakaoExample;
 				SWIFT_OBJC_BRIDGING_HEADER = "KakaoExample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

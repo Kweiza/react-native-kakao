@@ -55,6 +55,8 @@ repositories {
   jcenter()
   google()
 
+  maven { url 'https://devrepo.kakao.com/nexus/content/groups/public/' }
+
   def found = false
   def defaultDir = null
   def androidSourcesName = 'React Native sources'
@@ -127,4 +129,8 @@ dependencies {
   // noinspection GradleDynamicVersion
   api 'com.facebook.react:react-native:+'
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+  
+  implementation "com.kakao.sdk:v2-user:2.5.0"
+  implementation "com.kakao.sdk:v2-talk:2.5.0"
+  implementation "com.kakao.sdk:v2-story:2.5.0"
 }

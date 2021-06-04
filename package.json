@@ -1,5 +1,5 @@
 {
-  "name": "react-native-kakao",
+  "name": "react-native-kakao-sdk",
   "version": "0.1.0",
   "description": "KakaoSDK for react native",
   "main": "lib/commonjs/index",
@@ -13,7 +13,7 @@
     "android",
     "ios",
     "cpp",
-    "react-native-kakao.podspec",
+    "react-native-kakao-sdk.podspec",
     "!lib/typescript/example",
     "!android/build",
     "!ios/build",
@@ -34,15 +34,17 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "kakao",
+    "kakaosdk"
   ],
-  "repository": "https://github.com/Kweiza/react-native-kakao",
+  "repository": "https://github.com/Kweiza/react-native-kakao-sdk",
   "author": "Junseong Park <js@kweiza.com> (https://github.com/Kweiza)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Kweiza/react-native-kakao/issues"
+    "url": "https://github.com/Kweiza/react-native-kakao-sdk/issues"
   },
-  "homepage": "https://github.com/Kweiza/react-native-kakao#readme",
+  "homepage": "https://github.com/Kweiza/react-native-kakao-sdk#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

@@ -1,11 +1,11 @@
-# react-native-kakao
+# react-native-kakao-sdk
 
 KakaoSDK for react native
 
 ## Installation
 
 ```sh
-yarn add react-native-kakao
+yarn add react-native-kakao-sdk
 ```
 
 ## Configuration
@@ -36,9 +36,34 @@ yarn add react-native-kakao
 
 ## Usage
 
-```js
-import Kakao from 'react-native-kakao';
+### KakaoLogin
 
+자세한 예제는 [example/src/LoginScreen.tsx](./example/src/LoginScreen.tsx) 참고
+
+```js
+import { KakaoLogin } from 'react-native-kakao-sdk';
+
+try {
+  const r = await KakaoLogin.login();
+  console.log(r);
+} catch (e) {
+  console.log(e);
+}
+// ...
+```
+
+### KakaoLink
+
+자세한 예제는 [example/src/LinkScreen.tsx](./example/src/LinkScreen.tsx) 참고
+
+```js
+import { KakaoLink } from 'react-native-kakao-sdk';
+
+try {
+  await KakaoLogin.feedLink(template);
+} catch (e) {
+  console.log(e);
+}
 // ...
 ```
 

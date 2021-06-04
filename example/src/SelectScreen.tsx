@@ -13,6 +13,12 @@ export default function SelectScreen() {
           navigate('LoginScreen');
         }}
       />
+      <Button
+        title={'Link'}
+        onPress={() => {
+          navigate('LinkScreen');
+        }}
+      />
     </View>
   );
 }

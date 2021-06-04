@@ -10,6 +10,8 @@
 		4DC5422326659E8200839CCC /* RNKakao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC5421E26659BEB00839CCC /* RNKakao.swift */; };
 		4DC5422526659E8B00839CCC /* RNKakaoLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC5422126659C1500839CCC /* RNKakaoLogin.swift */; };
 		4DC5422726659F6700839CCC /* RNKakaoLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC5422626659F6700839CCC /* RNKakaoLogin.m */; };
+		4DC54232266A37FF00839CCC /* RNKakaoLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC54231266A37FF00839CCC /* RNKakaoLink.swift */; };
+		4DC54234266A382900839CCC /* RNKakaoLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC54233266A382900839CCC /* RNKakaoLink.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +33,9 @@
 		4DC5422126659C1500839CCC /* RNKakaoLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNKakaoLogin.swift; sourceTree = "<group>"; };
 		4DC5422626659F6700839CCC /* RNKakaoLogin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNKakaoLogin.m; sourceTree = "<group>"; };
 		4DC54228266856D400839CCC /* RNKakaoLogin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNKakaoLogin.h; sourceTree = "<group>"; };
+		4DC54231266A37FF00839CCC /* RNKakaoLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNKakaoLink.swift; sourceTree = "<group>"; };
+		4DC54233266A382900839CCC /* RNKakaoLink.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNKakaoLink.m; sourceTree = "<group>"; };
+		4DC54235266A383300839CCC /* RNKakaoLink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNKakaoLink.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +60,9 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				4DC54235266A383300839CCC /* RNKakaoLink.h */,
+				4DC54233266A382900839CCC /* RNKakaoLink.m */,
+				4DC54231266A37FF00839CCC /* RNKakaoLink.swift */,
 				4DC54228266856D400839CCC /* RNKakaoLogin.h */,
 				4DC5422626659F6700839CCC /* RNKakaoLogin.m */,
 				4DC5422126659C1500839CCC /* RNKakaoLogin.swift */,
@@ -122,8 +130,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DC5422326659E8200839CCC /* RNKakao.swift in Sources */,
+				4DC54232266A37FF00839CCC /* RNKakaoLink.swift in Sources */,
 				4DC5422726659F6700839CCC /* RNKakaoLogin.m in Sources */,
 				4DC5422526659E8B00839CCC /* RNKakaoLogin.swift in Sources */,
+				4DC54234266A382900839CCC /* RNKakaoLink.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

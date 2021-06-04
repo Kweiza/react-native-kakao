@@ -1,11 +1,13 @@
 {
-  "name": "react-native-kakao-example",
-  "description": "Example app for react-native-kakao",
+  "name": "react-native-kakao-sdk-example",
+  "description": "Example app for react-native-kakao-sdk",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
+    "ios:device": "react-native run-ios --device --configuration Release",
+    "build:ios": "react-native bundle --entry-file='index.tsx' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios'",
     "start": "react-native start"
   },
   "dependencies": {

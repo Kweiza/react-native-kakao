@@ -1,8 +1,12 @@
-import RNKakaoLogin, { TRNKakaoLogin } from './KakaoLogin';
-export { TKakaoOAuthToken, TRNKakaoLogin } from './KakaoLogin';
+import RNKakaoLogin, { TKakaoLogin } from './KakaoLogin';
+export { TKakaoOAuthToken, TKakaoLogin } from './KakaoLogin';
+export const KakaoLogin = RNKakaoLogin as TKakaoLogin;
 
-export const KakaoLogin = RNKakaoLogin as TRNKakaoLogin;
+import RNKakaoLink, { TKakaoLink } from './KakaoLink';
+export { TKakaoLink } from './KakaoLink';
+export const KakaoLink = RNKakaoLink as TKakaoLink;
 
 export default {
   KakaoLogin,
+  KakaoLink,
 };

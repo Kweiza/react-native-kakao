@@ -88,7 +88,7 @@ export type TKakaoUser = {
   hasSignedUp?: boolean;
 };
 
-export type TRNKakaoLogin = {
+export type TKakaoLogin = {
   isKakaoTalkLoginAvailable(): Promise<boolean>;
   loginWithKakaoTalk(): Promise<TKakaoOAuthToken>;
   loginWithKakaoAccount(): Promise<TKakaoOAuthToken>;
@@ -101,4 +101,4 @@ export type TRNKakaoLogin = {
 
 const { RNKakaoLogin } = NativeModules;
 
-export default RNKakaoLogin as TRNKakaoLogin;
+export default RNKakaoLogin as TKakaoLogin;
