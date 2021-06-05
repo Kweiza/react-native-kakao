@@ -2,15 +2,13 @@ package com.kweiza.reactnativekakaosdk
 
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
-import com.facebook.react.bridge.ReactMethod
-import com.facebook.react.bridge.Promise
 
 import com.kakao.sdk.common.KakaoSdk
 
-class KakaoModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
+class RNKakao(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
 
     override fun getName(): String {
-        return "Kakao"
+        return "RNKakao"
     }
 
     init {

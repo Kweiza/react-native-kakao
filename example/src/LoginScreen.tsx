@@ -1,7 +1,6 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Button, Text } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
+import { StyleSheet, View, Button, Text, ScrollView } from 'react-native';
 import { KakaoLogin } from 'react-native-kakao-sdk';
 
 export default function LoginScreen() {
