@@ -1,5 +1,5 @@
 
-package com.kweiza.reactnativekakaosdk
+package com.kweiza.reactnativekakao
 
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap

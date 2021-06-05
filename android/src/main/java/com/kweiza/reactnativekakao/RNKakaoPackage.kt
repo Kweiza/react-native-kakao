@@ -1,4 +1,4 @@
-package com.kweiza.reactnativekakaosdk
+package com.kweiza.reactnativekakao
 
 import com.facebook.react.ReactPackage
 import com.facebook.react.bridge.JavaScriptModule
@@ -8,7 +8,7 @@ import com.facebook.react.uimanager.ViewManager
 import java.util.*
 
 
-class KakaoPackage : ReactPackage {
+class RNKakaoPackage : ReactPackage {
     override fun createNativeModules(reactContext: ReactApplicationContext): List<NativeModule> {
         return listOf(RNKakao(reactContext), RNKakaoLogin(reactContext), RNKakaoLink(reactContext))
     }

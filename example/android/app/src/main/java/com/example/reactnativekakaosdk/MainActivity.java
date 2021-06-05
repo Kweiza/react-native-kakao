@@ -1,4 +1,4 @@
-package com.example.reactnativekakaosdk;
+package com.example.reactnativekakao;
 
 import com.facebook.react.ReactActivity;
 

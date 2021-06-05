@@ -1,4 +1,4 @@
-package com.kweiza.reactnativekakaosdk
+package com.kweiza.reactnativekakao
 
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule

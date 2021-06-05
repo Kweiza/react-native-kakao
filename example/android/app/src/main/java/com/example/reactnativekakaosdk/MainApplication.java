@@ -1,4 +1,4 @@
-package com.example.reactnativekakaosdk;
+package com.example.reactnativekakao;
 
 import android.app.Application;
 import android.content.Context;
@@ -11,7 +11,7 @@ import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
-import com.kweiza.reactnativekakaosdk.KakaoPackage;
+import com.kweiza.reactnativekakao.KakaoPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -62,7 +62,7 @@ public class MainApplication extends Application implements ReactApplication {
          We use reflection here to pick up the class that initializes Flipper,
         since Flipper library is not available in release mode
         */
-        Class<?> aClass = Class.forName("com.kweiza.reactnativekakaosdkExample.ReactNativeFlipper");
+        Class<?> aClass = Class.forName("com.kweiza.reactnativekakaoExample.ReactNativeFlipper");
         aClass
             .getMethod("initializeFlipper", Context.class, ReactInstanceManager.class)
             .invoke(null, context, reactInstanceManager);

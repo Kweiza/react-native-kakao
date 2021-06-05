@@ -1,4 +1,4 @@
-package com.kweiza.reactnativekakaosdk
+package com.kweiza.reactnativekakao
 
 import android.content.Context
 import com.facebook.react.bridge.*

@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Button, Text, ScrollView } from 'react-native';
-import { KakaoLogin } from 'react-native-kakao-sdk';
+import { KakaoLogin } from 'react-native-kakao';
 
 export default function LoginScreen() {
   const [log, setLog] = React.useState('');

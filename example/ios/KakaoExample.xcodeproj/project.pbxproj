@@ -538,7 +538,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.reactnativekakaosdk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.reactnativekakao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KakaoExample.app/KakaoExample";
 			};
@@ -558,7 +558,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.reactnativekakaosdk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.reactnativekakao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KakaoExample.app/KakaoExample";
 			};
@@ -580,7 +580,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.reactnativekakaosdk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.reactnativekakao;
 				PRODUCT_NAME = KakaoExample;
 				SWIFT_OBJC_BRIDGING_HEADER = "KakaoExample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -604,7 +604,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.reactnativekakaosdk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.reactnativekakao;
 				PRODUCT_NAME = KakaoExample;
 				SWIFT_OBJC_BRIDGING_HEADER = "KakaoExample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

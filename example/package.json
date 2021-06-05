@@ -1,6 +1,6 @@
 {
-  "name": "react-native-kakao-sdk-example",
-  "description": "Example app for react-native-kakao-sdk",
+  "name": "react-native-kakao-example",
+  "description": "Example app for react-native-kakao",
   "version": "0.0.1",
   "private": true,
   "scripts": {

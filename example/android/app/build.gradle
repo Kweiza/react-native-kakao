@@ -128,7 +128,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.example.reactnativekakaosdk"
+        applicationId "com.example.reactnativekakao"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -204,7 +204,7 @@ dependencies {
         implementation jscFlavor
     }
 
-    implementation project(':react-native-kakao-sdk')
+    implementation project(':react-native-kakao')
 }
 
 // Run this once to be able to run the application with BUCK

@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Button, ScrollView, Text } from 'react-native';
-import { KakaoLink } from 'react-native-kakao-sdk';
+import { KakaoLink } from 'react-native-kakao';
 import type {
   TKakaoMessageTemplateCommerce,
   TKakaoMessageTemplateFeed,
