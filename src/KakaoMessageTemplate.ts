@@ -1,8 +1,8 @@
 export type TKakaoMessageLink = {
   web_url?: string;
   mobile_web_url?: string;
-  android_execution_params?: { [key: string]: string };
-  ios_execution_params?: { [key: string]: string };
+  android_execution_params?: { [key: string]: string } | string;
+  ios_execution_params?: { [key: string]: string } | string;
 };
 
 export type TKakaoMessageContent = {
