@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
+    "build:android": "cd android && ./gradlew assembleRelease && cd ..",
     "ios": "react-native run-ios",
     "ios:device": "react-native run-ios --device --configuration Release",
     "build:ios": "react-native bundle --entry-file='index.tsx' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios'",
