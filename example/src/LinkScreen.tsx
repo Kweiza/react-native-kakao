@@ -32,8 +32,10 @@ const templateFeed: TKakaoMessageTemplateFeed = {
     {
       title: '앱으로 보기',
       link: {
-        android_execution_params: 'key1=value1&key2=value2',
-        ios_execution_params: 'key1=value1&key2=value2',
+        // android_execution_params: 'key1=value1&key2=value2',
+        // ios_execution_params: 'key1=value1&key2=value2',
+        android_execution_params: { key1: 'value1', key2: 'value2' },
+        ios_execution_params: { key1: 'value1', key2: 'value2' },
       },
     },
   ],

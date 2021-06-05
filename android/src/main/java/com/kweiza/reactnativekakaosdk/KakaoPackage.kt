@@ -10,7 +10,7 @@ import java.util.*
 
 class KakaoPackage : ReactPackage {
     override fun createNativeModules(reactContext: ReactApplicationContext): List<NativeModule> {
-        return listOf(RNKakao(reactContext), RNKakaoLogin(reactContext))
+        return listOf(RNKakao(reactContext), RNKakaoLogin(reactContext), RNKakaoLink(reactContext))
     }
 
     override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {
