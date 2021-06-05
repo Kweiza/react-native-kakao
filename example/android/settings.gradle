@@ -2,5 +2,5 @@ rootProject.name = 'KakaoExample'
 apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
 include ':app'
 
-include ':reactnativekakaosdk'
-project(':reactnativekakaosdk').projectDir = new File(rootProject.projectDir, '../../android')
+include ':react-native-kakao-sdk'
+project(':react-native-kakao-sdk').projectDir = new File(rootProject.projectDir, '../../android')
