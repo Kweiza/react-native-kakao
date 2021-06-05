@@ -1,6 +1,6 @@
 {
   "name": "react-native-kakao",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "KakaoSDK for react native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",

@@ -96,7 +96,7 @@ export type TKakaoLogin = {
   logout(): Promise<void>;
   unlink(): Promise<void>;
   accessTokenInfo(): Promise<TKakaoAccessTokenInfo>;
-  me(): Promise<void>;
+  me(): Promise<TKakaoUser>;
 };
 
 const { RNKakaoLogin } = NativeModules;
