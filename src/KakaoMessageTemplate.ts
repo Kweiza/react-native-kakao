@@ -36,7 +36,7 @@ export type TKakaoMessageCommerce = {
 };
 
 export type TKakaoMessageTemplateFeed = {
-  object_type: 'feed';
+  object_type?: 'feed';
   content: TKakaoMessageContent;
   social?: TKakaoMessageSocial;
   button_title?: string;
@@ -44,7 +44,7 @@ export type TKakaoMessageTemplateFeed = {
 };
 
 export type TKakaoMessageTemplateList = {
-  object_type: 'list';
+  object_type?: 'list';
   header_title: string;
   header_link: TKakaoMessageLink;
   contents: TKakaoMessageContent[];
@@ -53,7 +53,7 @@ export type TKakaoMessageTemplateList = {
 };
 
 export type TKakaoMessageTemplateLocation = {
-  object_type: 'location';
+  object_type?: 'location';
   address: string;
   address_title?: string;
   content: TKakaoMessageContent;
@@ -63,7 +63,7 @@ export type TKakaoMessageTemplateLocation = {
 };
 
 export type TKakaoMessageTemplateCommerce = {
-  object_type: 'commerce';
+  object_type?: 'commerce';
   content: TKakaoMessageContent;
   commerce?: TKakaoMessageCommerce;
   button_title?: string;
@@ -71,7 +71,7 @@ export type TKakaoMessageTemplateCommerce = {
 };
 
 export type TKakaoMessageTemplateText = {
-  object_type: 'text';
+  object_type?: 'text';
   text: string;
   link: TKakaoMessageLink;
   button_title?: string;

@@ -49,6 +49,7 @@ const convertLinkParams = (link: TKakaoMessageLink) => {
 export default {
   async feedLink(template: TKakaoMessageTemplateFeed) {
     let modTemplate = template;
+    modTemplate.object_type = 'feed';
     if (Platform.OS === 'ios') {
       modTemplate.content.link = convertLinkParams(template.content.link);
       modTemplate.buttons = template.buttons?.map((v) => ({
@@ -60,6 +61,7 @@ export default {
   },
   async listLink(template: TKakaoMessageTemplateList) {
     let modTemplate = template;
+    modTemplate.object_type = 'list';
     if (Platform.OS === 'ios') {
       modTemplate.header_link = convertLinkParams(template.header_link);
       modTemplate.contents = template.contents.map((v) => ({
@@ -75,6 +77,7 @@ export default {
   },
   async locationLink(template: TKakaoMessageTemplateLocation) {
     let modTemplate = template;
+    modTemplate.object_type = 'location';
     if (Platform.OS === 'ios') {
       modTemplate.content.link = convertLinkParams(template.content.link);
       modTemplate.buttons = template.buttons?.map((v) => ({
@@ -86,6 +89,7 @@ export default {
   },
   async commerceLink(template: TKakaoMessageTemplateCommerce) {
     let modTemplate = template;
+    modTemplate.object_type = 'commerce';
     if (Platform.OS === 'ios') {
       modTemplate.content.link = convertLinkParams(template.content.link);
       modTemplate.buttons = template.buttons?.map((v) => ({
@@ -97,6 +101,7 @@ export default {
   },
   async textLink(template: TKakaoMessageTemplateText) {
     let modTemplate = template;
+    modTemplate.object_type = 'text';
     if (Platform.OS === 'ios') {
       modTemplate.link = convertLinkParams(template.link);
       modTemplate.buttons = template.buttons?.map((v) => ({
