@@ -65,7 +65,7 @@ export type TKakaoMessageTemplateLocation = {
 export type TKakaoMessageTemplateCommerce = {
   object_type?: 'commerce';
   content: TKakaoMessageContent;
-  commerce?: TKakaoMessageCommerce;
+  commerce: TKakaoMessageCommerce;
   button_title?: string;
   buttons?: TKakaoMessageButton[];
 };
