@@ -11,7 +11,8 @@ import type {
 } from './KakaoMessageTemplate';
 
 export type TKakaoLinkResult = {
-  url: string;
+  argumentMsg: {[key: string]: string};
+  warningMsg: {[key: string]: string};
 };
 
 export type TKakaoLink = {

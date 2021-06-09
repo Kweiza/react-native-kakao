@@ -215,6 +215,21 @@ try {
 // ...
 ```
 
+```ts
+// 참고 https://developers.kakao.com/docs/latest/ko/message/message-template
+// 공통 resposne
+// {
+//   argumentMsg: {[key: string]: string};
+//   warningMsg: {[key: string]: string};
+// }
+
+feedLink(template: TKakaoMessageTemplateFeed)
+listLink(template: TKakaoMessageTemplateList)
+locationLink(template: TKakaoMessageTemplateLocation)
+commerceLink(template: TKakaoMessageTemplateCommerce)
+textLink(template: TKakaoMessageTemplateText)
+```
+
 ## Contributing
 
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
