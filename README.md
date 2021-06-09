@@ -8,7 +8,21 @@ KakaoSDK for react native
 yarn add @kweiza/react-native-kakao
 ```
 
+```sh
+npx pod-install
+or
+cd ios && pod install
+```
+
 ## Configuration
+
+### iOS
+
+- iOS Deployment Target을 11.0로 변경
+
+- Swift Bridge 생성
+
+- info.plist에 아래 부분 추가
 
 ```
 <key>CFBundleURLTypes</key>
@@ -32,6 +46,71 @@ yarn add @kweiza/react-native-kakao
   <string>storykompassauth</string>
   <string>kakaolink</string>
 </array>
+```
+
+### Android
+
+- android/build.gradle에 아래 내용 추가
+
+```
+...
+buildscript {
+  ext {
+    ...
+    kotlinVersion = '1.3.41'
+    ...
+  }
+  ...
+  dependencies {
+    ...
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+  }
+}
+...
+
+allprojects {
+    repositories {
+      ...
+      maven { url 'https://devrepo.kakao.com/nexus/content/groups/public/' }
+    }
+}
+```
+
+- android/app/src/main/AndroidManifest.xml 에 아래 내용 추가
+
+```
+<manifest
+  ...
+>
+  ...
+  <application
+    android:allowBackup="true"
+    tools:replace="android:allowBackup" // android:allowBackup="true" 추가 시 에러가 난다면 이 라인을 추가
+    ...
+  >
+  ...
+    <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity">
+      <intent-filter>
+          <action android:name="android.intent.action.VIEW" />
+          <category android:name="android.intent.category.DEFAULT" />
+          <category android:name="android.intent.category.BROWSABLE" />
+
+          <!-- Redirect URI: "kakao{NATIVE_APP_KEY}://oauth“ -->
+          <data android:host="oauth"
+              android:scheme="kakao{카카오 네이티브앱 키}" />
+      </intent-filter>
+    </activity>
+  </application>
+</manifest>
+...
+```
+
+- android/app/src/main/res/values/strings.xml 에 아래 내용 추가
+```
+<resources>
+  ...
+  <string name="kakao_app_key">{카카오 네이티브앱 키}</string>
+</resources>
 ```
 
 ## Usage
